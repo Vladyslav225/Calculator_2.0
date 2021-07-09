@@ -1,9 +1,13 @@
+#Ввод символа
+
 def inputNumber(userNumber):
 
-    userNumber = input(": ")
+    userNumber = input("Input number: ")
     return float(userNumber)
 
 ############
+
+#Расчет Первого и второго чисел
 
 def inputSymbol(operator, userNumber1, userNumber2):
     operator = input("Operator: ")
@@ -32,6 +36,8 @@ def inputSymbol(operator, userNumber1, userNumber2):
             continue
 
 ###########
+
+#Расчет с третьим числом
 
 def inputSymbol1(operator, resultUser, userNumber3):
     operator = input("Operator: ")
