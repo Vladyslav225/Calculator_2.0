@@ -49,15 +49,15 @@ def inputSymbol1(operator, resultUser, userNumber3):
             return operator
         
         elif operator == "-":
-            operator = round(resultUser + userNumber3, 3)
+            operator = round(resultUser - userNumber3, 3)
             return operator
 
         elif operator == "*":
-            operator = round(resultUser + userNumber3, 3)
+            operator = round(resultUser * userNumber3, 3)
             return operator
         
         elif operator == "/":
-            operator = round(resultUser + userNumber3, 3)
+            operator = round(resultUser / userNumber3, 3)
             return operator
 
         else:
