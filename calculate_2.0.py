@@ -1,15 +1,18 @@
 import moduleCalculator as mcal     #Подключение модуля
 
 
-#Знакомство программы с переменными
-resultUser = " "
-userNumber = " "
-operator = " "
-userNumber1 = " "
-userNumber2 = " "
+
 
 
 while True:
+
+    #Знакомство программы с переменными
+    resultUser = " "
+    userNumber = " "
+    operator = " "
+    userNumber1 = " "
+    userNumber2 = " "
+    
     try:
         userNumber1 = mcal.inputNumber(userNumber)  #Первое число
         print(userNumber1)
