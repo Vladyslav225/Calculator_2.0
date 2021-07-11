@@ -1,13 +1,19 @@
-#Ввод символа
+#Entering characters
 
 def inputNumber(userNumber):
 
     userNumber = input("Input number: ")
+
+#Exit from module
+    if userNumber.lower() == "exit":    
+        exit()
+
     return float(userNumber)
+
 
 ############
 
-#Расчет Первого и второго чисел
+#First User's number + Second User's number (First calculation)
 
 def inputSymbol(operator, userNumber1, userNumber2):
     operator = input("Operator: ")
@@ -17,7 +23,7 @@ def inputSymbol(operator, userNumber1, userNumber2):
         if operator == "+":
             operator = round(userNumber1 + userNumber2, 3)
             return operator
-        
+    
         elif operator == "-":
             operator = round(userNumber1 - userNumber2, 3)
             return operator
@@ -25,7 +31,7 @@ def inputSymbol(operator, userNumber1, userNumber2):
         elif operator == "*":
             operator = round(userNumber1 * userNumber2, 3)
             return operator
-        
+    
         elif operator == "/":
             operator = round(userNumber1 / userNumber2, 3)
             return operator
@@ -35,9 +41,9 @@ def inputSymbol(operator, userNumber1, userNumber2):
             operator = input("Operator: ")
             continue
 
-###########
+# ###########
 
-#Расчет с третьим числом
+#First calculation + Third User's number (Second calculation)
 
 def inputSymbol1(operator, resultUser, userNumber3):
     operator = input("Operator: ")

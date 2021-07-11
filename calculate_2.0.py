@@ -1,38 +1,49 @@
-import moduleCalculator as mcal     #Подключение модуля
-
-
-
+import moduleCalculator as mcal     #Connecting the module
 
 
 while True:
 
-    #Знакомство программы с переменными
+    print("To finish calculation write 'End' or 'Exit' ")
+
+#Acquaintance of the prgram with the variables used
+    
     resultUser = " "
     userNumber = " "
     operator = " "
     userNumber1 = " "
     userNumber2 = " "
+
     
     try:
-        userNumber1 = mcal.inputNumber(userNumber)  #Первое число
+
+#Firrst User's number        
+        userNumber1 = mcal.inputNumber(userNumber)  
         print(userNumber1)
 
-        userNumber2 = mcal.inputNumber(userNumber)  #Второе число
+#Second User's number        
+        userNumber2 = mcal.inputNumber(userNumber)  
         print(userNumber2)
 
-        resultUser = mcal.inputSymbol(operator, userNumber1, userNumber2)   #Обращение к расчету первых двух чисел (Первый расчет)
+ #First User's number + Second User's number (First calculation)
+        resultUser = mcal.inputSymbol(operator, userNumber1, userNumber2)  
         print(resultUser)
 
-        userNumber3 = mcal.inputNumber(userNumber)  #Третье число
+        
+#Third User's number
+        userNumber3 = mcal.inputNumber(userNumber)  
         print(userNumber3)
 
-        resultUser1 = mcal.inputSymbol1(operator, resultUser, userNumber3)  #Обращение к расчету с третьим числом
+#resultUser + Third User's number (Second calculation)
+        resultUser1 = mcal.inputSymbol1(operator, resultUser, userNumber3)  
         print(resultUser1)
 
+#Exit from cycle
+    except SystemExit:  
+        exit()
+
+#If userNumber == str or operator
     except:
         print("Input number!!!")
         continue
-    
-    #inputSymbol(operator, userNumber1, userNumber2)
-    # mcal.inputNumber(userNumber)
-    # mcal.inputNumber(userNumber)
+
+
