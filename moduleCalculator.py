@@ -2,13 +2,18 @@
 
 def inputNumber(userNumber):
 
-    userNumber = input("Input number: ")
+    while True:
+        userNumber = input("Input number: ")
+
+        if userNumber == "0":
+            print("You can't use 0")
+            continue
 
 #Exit from module
-    if userNumber.lower() == "exit":    
-        exit()
+        if userNumber.lower() == "exit":    
+            exit()
 
-    return float(userNumber)
+        return float(userNumber)
 
 
 ############
@@ -34,6 +39,18 @@ def inputSymbol(operator, userNumber1, userNumber2):
     
         elif operator == "/":
             operator = round(userNumber1 / userNumber2, 3)
+            return operator
+
+        elif operator == "**":
+            operator = round(userNumber1 ** userNumber2, 3)
+            return operator
+
+        elif operator == "//":
+            operator = round(userNumber1 // userNumber2, 3)
+            return operator
+    
+        elif operator == "%":
+            operator = round(userNumber1 % userNumber2, 3)
             return operator
 
         else:
@@ -64,6 +81,18 @@ def inputSymbol1(operator, resultUser, userNumber3):
         
         elif operator == "/":
             operator = round(resultUser / userNumber3, 3)
+            return operator
+
+        elif operator == "**":
+            operator = round(resultUser ** userNumber3, 3)
+            return operator
+
+        elif operator == "//":
+            operator = round(resultUser // userNumber3, 3)
+            return operator
+        
+        elif operator == "%":
+            operator = round(resultUser % userNumber3, 3)
             return operator
 
         else:

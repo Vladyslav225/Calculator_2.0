@@ -4,6 +4,8 @@ import moduleCalculator as mcal     #Connecting the module
 while True:
 
     print("To finish calculation write 'Exit' ")
+    print("You can use these operators: \nAdding: ' + '; \nSubtraction: ' - '; \nIncrease: ' * '; \nDivision: ' / ';")
+    print("You can use these operators: \nInteger division of two numbers: ' // '; \nDegreeing: ' ** '; \nObtaining the balance of divdsion: ' % '")
 
 #Acquaintance of the prgram with the variables used
     
@@ -37,7 +39,7 @@ while True:
         resultUser1 = mcal.inputSymbol1(operator, resultUser, userNumber3)  
         print(resultUser1)
 
-#Exit from cycle
+#Exit from program
     except SystemExit:  
         exit()
 
