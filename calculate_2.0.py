@@ -3,7 +3,7 @@ import moduleCalculator as mcal     #Connecting the module
 
 while True:
 
-    print("To finish calculation write 'End' or 'Exit' ")
+    print("To finish calculation write 'Exit' ")
 
 #Acquaintance of the prgram with the variables used
     
