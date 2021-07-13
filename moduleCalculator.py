@@ -1,13 +1,24 @@
+import os
+
+
+
 #Entering characters
 
 def inputNumber(userNumber):
 
     while True:
+
         userNumber = input("Input number: ")
 
         if userNumber == "0":
             print("You can't use 0")
             continue
+
+#Termial cleaning
+        if userNumber.lower() == "clear":
+            os.system("clear")
+        #     print("\033c")
+        #     continue
 
 #Exit from module
         if userNumber.lower() == "exit":    
@@ -20,82 +31,82 @@ def inputNumber(userNumber):
 
 #First User's number + Second User's number (First calculation)
 
-def inputSymbol(operator, userNumber1, userNumber2):
-    operator = input("Operator: ")
+def inputSymbol(operator, firstNumber, secondNumber, resultNumber):
 
     while True:
 
+        operator = input("Operator: ")
+
         if operator == "+":
-            operator = round(userNumber1 + userNumber2, 3)
-            return operator
+            resultNumber = firstNumber + secondNumber
+            return resultNumber
     
         elif operator == "-":
-            operator = round(userNumber1 - userNumber2, 3)
+            operator = round(firstNumber - secondNumber, 3)
             return operator
 
         elif operator == "*":
-            operator = round(userNumber1 * userNumber2, 3)
+            operator = round(firstNumber * secondNumber, 3)
             return operator
     
         elif operator == "/":
-            operator = round(userNumber1 / userNumber2, 3)
+            operator = round(firstNumber / secondNumber, 3)
             return operator
 
         elif operator == "**":
-            operator = round(userNumber1 ** userNumber2, 3)
+            operator = round(firstNumber ** secondNumber, 3)
             return operator
 
         elif operator == "//":
-            operator = round(userNumber1 // userNumber2, 3)
+            operator = round(firstNumber // secondNumber, 3)
             return operator
     
         elif operator == "%":
-            operator = round(userNumber1 % userNumber2, 3)
+            operator = round(firstNumber % secondNumber, 3)
             return operator
 
         else:
             print("Input operator!!!")
-            operator = input("Operator: ")
             continue
 
-# ###########
+##########
 
 #First calculation + Third User's number (Second calculation)
 
-def inputSymbol1(operator, resultUser, userNumber3):
-    operator = input("Operator: ")
+def inputSymbol1(operator, first_resultUser, thirdNumber):
 
     while True:
 
+        operator = input("Operator: ")
+
         if operator == "+":
-            operator = round(resultUser + userNumber3, 3)
+            operator = round(first_resultUser + thirdNumber, 3)
             return operator
         
         elif operator == "-":
-            operator = round(resultUser - userNumber3, 3)
+            operator = round(first_resultUser - thirdNumber, 3)
             return operator
 
         elif operator == "*":
-            operator = round(resultUser * userNumber3, 3)
+            operator = round(first_resultUser * thirdNumber, 3)
             return operator
         
         elif operator == "/":
-            operator = round(resultUser / userNumber3, 3)
+            operator = round(first_resultUser / thirdNumber, 3)
             return operator
 
         elif operator == "**":
-            operator = round(resultUser ** userNumber3, 3)
+            operator = round(first_resultUser ** thirdNumber, 3)
             return operator
 
         elif operator == "//":
-            operator = round(resultUser // userNumber3, 3)
+            operator = round(first_resultUser // thirdNumber, 3)
             return operator
         
         elif operator == "%":
-            operator = round(resultUser % userNumber3, 3)
+            operator = round(first_resultUser % thirdNumber, 3)
             return operator
 
         else:
             print("Input operator!!!")
-            operator = input("Operator: ")
             continue
