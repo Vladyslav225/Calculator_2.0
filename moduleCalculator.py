@@ -1,7 +1,3 @@
-import os
-
-
-
 #Entering characters
 
 def inputNumber(userNumber):
@@ -15,13 +11,12 @@ def inputNumber(userNumber):
             continue
 
 #Termial cleaning
-        if userNumber.lower() == "clear":
-            os.system("clear")
-        #     print("\033c")
-        #     continue
+        elif userNumber.lower() == "clear" or userNumber.lower() == "clean":
+            print("\033c")
+            continue
 
 #Exit from module
-        if userNumber.lower() == "exit":    
+        elif userNumber.lower() == "exit" or userNumber.lower() == "end":    
             exit()
 
         return float(userNumber)
