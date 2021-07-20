@@ -1,51 +1,65 @@
 import moduleCalculator as mcal     #Connecting the module
 
 
+
+resultUser = " "
+resultsUser = [ ]
+userNumber = " "
+operator = " "
+firstNumber = " "
+secondNumber = " "
+
+
+print("To finish calculation write 'Clear' or 'Clean' ")
+print("To finish calculation write 'Exit' ")
+
 while True:
 
-    print("To finish calculation write 'Exit' ")
-    print("You can use these operators: \nAdding: ' + '; \nSubtraction: ' - '; \nIncrease: ' * '; \nDivision: ' / ';")
-    print("You can use these operators: \nInteger division of two numbers: ' // '; \nDegreeing: ' ** '; \nObtaining the balance of divdsion: ' % '")
+        while True:
 
-#Acquaintance of the prgram with the variables used
-    
-    resultUser = " "
-    userNumber = " "
-    operator = " "
-    userNumber1 = " "
-    userNumber2 = " "
-
-    
-    try:
 
 #Firrst User's number        
-        userNumber1 = mcal.inputNumber(userNumber)  
-        print(userNumber1)
+                firstNumber = mcal.inputNumber(userNumber)  
+                print(firstNumber)
 
-#Second User's number        
-        userNumber2 = mcal.inputNumber(userNumber)  
-        print(userNumber2)
+                # userNumbers.append(userNumber)
+                
+                operator = mcal.inputSymbol(operator)  
+                print(operator)
 
- #First User's number + Second User's number (First calculation)
-        resultUser = mcal.inputSymbol(operator, userNumber1, userNumber2)  
-        print(resultUser)
+# #Second User's number        
+#         secondNumber = mcal.inputNumber(userNumber)  
+#         print(secondNumber)
 
-        
-#Third User's number
-        userNumber3 = mcal.inputNumber(userNumber)  
-        print(userNumber3)
+# #Result
+#         resultUser = mcal.resultUser(operator, firstNumber, secondNumber)
+#         print(resultUser)
 
-#resultUser + Third User's number (Second calculation)
-        resultUser1 = mcal.inputSymbol1(operator, resultUser, userNumber3)  
-        print(resultUser1)
+#         resultsUser.append(resultUser)
 
-#Exit from program
-    except SystemExit:  
-        exit()
+# #First User's number + Second User's number (First calculation)
+#         operator = mcal.inputSymbol(operator)  
+#         print(operator)
 
-#If userNumber == str or operator
-    except:
-        print("Input number!!!")
-        continue
+#         resultsUser = mcal.resultUser(operator, firstNumber, secondNumber)
+#         print(resultsUser)
+
+     
+# #Third User's number
+#         userNumber3 = mcal.inputNumber(userNumber)  
+#         print(userNumber3)
+
+# #resultUser + Third User's number (Second calculation)
+#         resultUser1 = mcal.inputSymbol1(operator, resultUser, userNumber3)  
+#         print(resultUser1)
+
+# #Exit from program
+#     except SystemExit:  
+#         exit()
+
+# #If userNumber == str or operator
+#     except:
+#         print("Input number!!!")
+#         continue
 
 
