@@ -1,19 +1,28 @@
 allOperator = ["+", "-", "*", "/", "**", "//", "%"]
 
 
-def inputNumber(userNumber):
+
+def exit_clear(userNumber, operator):
+
+    if userNumber.lower() == "exit" or operator.lower() == "exit":
+
+        return exit()
+
+    elif userNumber.lower() == "clear" or operator.lower() == "clear":
+
+        return ("\033c")
+
+
+        
+def inputNumber(userNumber, operator):
 
     while True:
 
         userNumber = input("Input number: ")
 
-        if userNumber.lower() == "exit":
-            exit()
+        userNumber = exit_clear(userNumber, operator)
 
-        elif userNumber.lower() == "clear":
-            print("\033c")
-
-        elif userNumber == "0":
+        if userNumber == "0":
             print("You can't use 0")
             continue
 
@@ -22,10 +31,9 @@ def inputNumber(userNumber):
 
         except ValueError:
             print("Input Number!!!")
-            continue
 
 
-def inputOperator(operator):
+def inputOperator(userNumber, operator):
     
     while True:
 
@@ -33,11 +41,7 @@ def inputOperator(operator):
 
         operator = input("Input operator: ")
 
-        if operator.lower() == "exit":
-            exit()
-
-        elif operator.lower() == "clear":
-            print("\033c")
+        operator = exit_clear(userNumber, operator)
 
         try:
             if operator in allOperator:
@@ -45,7 +49,6 @@ def inputOperator(operator):
 
         except ValueError:
             print("ValueError")
-            continue
 
 
 def calculation(firstNumber, secondNumber, operator):
@@ -77,3 +80,4 @@ def calculation(firstNumber, secondNumber, operator):
     elif operator == "%":
         result = firstNumber % secondNumber
         return round(result, 3)
+
